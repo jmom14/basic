@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <h1 class="title" id="header">Books</h1>
+
+    <div class="content">
+        <form id="form" class="form">
+            <input id="input-author" type="text" name="author" placeholder="Author" required />
+            <input id="input-title" type="text" name="title" placeholder="Title" required />
+            <button id="submit-button" class="button" type="submit">Add</button>
+            <button id="cancel-button" style="display: none;" class="button danger" type="button"
+                onclick="cancelEdit()">Cancel</button>
+        </form>
+        <br />
+        <br />
+    </div>
+
+    <table id="books-table">
+        <thead>
+            <tr>
+                <th onclick="sortBooks('author')">Author</th>
+                <th onclick="sortBooks('title')">Title</th>
+                <th style="width: 150px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="books-body">
+        </tbody>
+    </table>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>
